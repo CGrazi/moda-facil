@@ -1,0 +1,3 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { Inventory, inventoryOptions } from '@/components/moda/inventory';
+export const Route=createFileRoute('/_authenticated/estoque')({head:()=>({meta:[{title:'Estoque | Moda Fácil'},{name:'description',content:'Controle seus produtos, quantidades e preços na Moda Fácil.'},{property:'og:title',content:'Estoque | Moda Fácil'},{property:'og:description',content:'Seu estoque de roupas organizado.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),loader:({context})=>context.queryClient.ensureQueryData(inventoryOptions),component:Inventory});
