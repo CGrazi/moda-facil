@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application rules
+- Keep signed-in inventory at `/estoque` under the client-only authenticated layout; public home and auth pages share the sign-in form to avoid duplicate home routes.
+- Use authenticated server functions and owner-scoped RLS for inventory and profile operations so private data never relies on UI checks.
+- Define shared presentation in the global design system and reuse the Moda components so auth and inventory remain consistent.
